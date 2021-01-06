@@ -2,7 +2,7 @@ package com.devsuperior.dsdeliver.dto;
 
 import com.devsuperior.dsdeliver.entities.Enum.OrderStatus;
 import com.devsuperior.dsdeliver.entities.Order;
-import lombok.Data;
+import lombok.*;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -10,7 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class OrderDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
