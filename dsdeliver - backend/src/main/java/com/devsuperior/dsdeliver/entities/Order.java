@@ -34,6 +34,16 @@ public class Order implements Serializable {
     )
     private Set<Product> products = new HashSet<>();
 
+    public Order(){}
+
+    public Order(Long id, String address, Double latitude, Double longitude, Instant moment, OrderStatus status) {
+        this.id = id;
+        this.address = address;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.moment = moment;
+        this.status = status;
+    }
     //Ele usa o Set porque ele não quer admitir repetições do mesmo produto dentro do mesmo pedido. O Set garante que não vai repetir. Ele também na hora de criar o banco, ele já faz a relação muitos pra muitos.
 
 }
