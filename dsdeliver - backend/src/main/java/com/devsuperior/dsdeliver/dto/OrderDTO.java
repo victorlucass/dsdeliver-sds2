@@ -2,12 +2,18 @@ package com.devsuperior.dsdeliver.dto;
 
 import com.devsuperior.dsdeliver.entities.Enum.OrderStatus;
 import com.devsuperior.dsdeliver.entities.Order;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
+@Data
 public class OrderDTO implements Serializable {
-    public static final long serialVersionUID = 1L;
+
+    private static final long serialVersionUID = 1L;
 
     private Long id;
     private String address;
@@ -15,6 +21,7 @@ public class OrderDTO implements Serializable {
     private Double longitude;
     private Instant moment;
     private OrderStatus status;
+    private List<ProductDTO> products = new ArrayList<>();
 
     public OrderDTO(Order entity){
         id = entity.getId();
@@ -23,5 +30,8 @@ public class OrderDTO implements Serializable {
         longitude = entity.getLongitude();
         moment = entity.getMoment();
         status = entity.getStatus();
+        products = entity.getProducts().stream().map(
+                x -> new ProductDTO(x)
+        ).collect(Collectors.toList());
     }
 }
