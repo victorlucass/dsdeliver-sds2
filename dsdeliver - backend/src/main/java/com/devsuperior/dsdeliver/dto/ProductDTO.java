@@ -1,11 +1,14 @@
 package com.devsuperior.dsdeliver.dto;
 
 import com.devsuperior.dsdeliver.entities.Product;
-import lombok.Data;
+import lombok.*;
 
 import java.io.Serializable;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class ProductDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
