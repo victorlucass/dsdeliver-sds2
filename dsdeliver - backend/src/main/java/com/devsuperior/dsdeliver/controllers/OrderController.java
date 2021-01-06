@@ -33,4 +33,12 @@ public class OrderController {
 
     }
 
+    @PutMapping("/{id}/delivered")
+    public ResponseEntity<OrderDTO> setDelivered(@PathVariable Long id){
+    //A diferença do @RequestBody para o @PathVariable é que o Request pega um corpo com vários argumentos e o Path ele se refere apenas uma variável.
+        OrderDTO orderDTO = orderService.setDelivered(id);
+        return ResponseEntity.ok().body(orderDTO);
+    }
+
+
 }

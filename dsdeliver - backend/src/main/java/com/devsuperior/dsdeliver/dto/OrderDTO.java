@@ -3,7 +3,6 @@ package com.devsuperior.dsdeliver.dto;
 import com.devsuperior.dsdeliver.entities.Enum.OrderStatus;
 import com.devsuperior.dsdeliver.entities.Order;
 import lombok.*;
-
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.ArrayList;
