@@ -1,6 +1,7 @@
 package com.devsuperior.dsdeliver.controllers;
 
 import com.devsuperior.dsdeliver.dto.OrderDTO;
+import com.devsuperior.dsdeliver.entities.Order;
 import com.devsuperior.dsdeliver.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -33,4 +34,9 @@ public class OrderController {
 
     }
 
+    @PutMapping("{id}/delivered")
+    public ResponseEntity<OrderDTO> setDelivered( @PathVariable Long id ){
+        OrderDTO order =  orderService.setDelivered(id);
+        return ResponseEntity.ok().body(order);
+    }
 }
