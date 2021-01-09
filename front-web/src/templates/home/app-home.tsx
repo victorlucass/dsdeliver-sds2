@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import FooterApp from "../footer/footer-app";
 import "../home/app-home.css";
 import { ReactComponent as MainImg } from "../home/main-img.svg";
@@ -18,16 +19,15 @@ function HomeApp() {
               <br />
               levaremoss na sua porta
             </h3>
-            <a href="#" className="home-btn-order">
+            <Link to="/orders" className="home-btn-order">
               Fazer pedido
-            </a>
+            </Link>
           </div>
           <div className="home-img">
             <MainImg />
           </div>
         </div>
       </div>
-      <FooterApp/>
     </>
   );
 }

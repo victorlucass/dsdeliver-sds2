@@ -1,14 +1,11 @@
 import "./App.css";
 import NavbarApp from "./templates/navbar/app-navbar";
 import HomeApp from "./templates/home/app-home";
-import FooterApp from "./templates/footer/footer-app";
+import Router from "./Router";
 
 function App() {
   return (
-    <body>
-      <NavbarApp />
-      <HomeApp />
-    </body>
+        <Router />
   );
 }
 
