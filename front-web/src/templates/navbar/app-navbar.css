@@ -8,7 +8,7 @@
   --light-color: #F5F5F5;
 }
 
-html, body {
+* {
   margin: 0;
   padding:0;
 }
@@ -21,12 +21,11 @@ a {
   text-decoration: none;
 }
 .main-navbar{
-  /* height: 70px; */
   background-color: #da5c5c;
   padding: 17px 0 20px 45px;
   display: flex;
   align-items: center;
-  width: 100%;
+  max-width: 100%;
 }
 
 .logo-title{
