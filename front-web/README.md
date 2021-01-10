@@ -84,3 +84,8 @@ Rotas ():
   <Switch> => Uma condição pra ver ser a rota desejada é verdadeira
   <Router path='/'> => tag mais endpoint 
   <NameApp/> => componente que deve ser chamado. 
+
+Requisições HTTP ():
+  Adicionando uma biblioteca para oferecer métodos prontos, vamos usar 'axios';
+
+  npm install axios
