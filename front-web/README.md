@@ -4,6 +4,9 @@ Obs: Para melhor entendimento eu gosto de comparar os conceito de react com a do
 
 ** -> comentário do vídeo
 
+Criando um projeto React:
+  npx create-react-app front-web(nome do projeto) --template typescript --use-npm 
+
 Component -> É um "pedaço" de um todo.
 
 Props -> É uma injeção:
@@ -39,6 +42,8 @@ Ciclo de vida do component -> useEffect({function}, [array]):
     () => { console.log('Estou funcionando'), [**depedências] }
   );
 
+  Obs: Ele só vai executar a função, por exemplo, quando o component for chamada. 
+
   Estado -> useState() :
 
     "Imagine que tem dois botões e dois eventos distintos de somar e diminuir, vamos criar os eventos"
@@ -60,3 +65,22 @@ Ciclo de vida do component -> useEffect({function}, [array]):
       )
 
     }
+
+Rotas ():
+  Primeiro precisa instalar a (1)biblioteca/(2)tipo de rotas;
+  1: npm install react-router-dom
+  2: npm install @type/react-router-dom
+
+  Criei um component Router();
+  <BrowserRouter>
+     <Switch>
+          <Route path='/name'>
+            <NameApp />
+          </Route>
+     <Switch>
+  </BrowserRouter>
+
+  <BrowserRouter> => Deve definir essa tag pai;
+  <Switch> => Uma condição pra ver ser a rota desejada é verdadeira
+  <Router path='/'> => tag mais endpoint 
+  <NameApp/> => componente que deve ser chamado. 

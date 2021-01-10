@@ -1,12 +1,20 @@
 import HeaderOrders from "./header-orders";
-
+import ProductsList from "./products-list";
 import './app-orders.css'
+import { useEffect } from "react";
+
 function OrdersApp(){
+
+  useEffect(() => {
+    
+  },[]);
+
   return(
     <>
-     <header className='orders-container'>
+     <main className='orders-container'>
        <HeaderOrders/>
-     </header>
+       <ProductsList/>
+     </main>
     </>
   )
 }

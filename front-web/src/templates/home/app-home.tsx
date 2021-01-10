@@ -28,6 +28,9 @@ function HomeApp() {
           </div>
         </div>
       </div>
+      <footer>
+        <FooterApp/>
+      </footer>
     </>
   );
 }

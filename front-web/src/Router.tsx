@@ -15,7 +15,6 @@ function Router(){
             <HomeApp />
           </Route>
         </Switch>
-        <FooterApp/>
       </BrowserRouter>  
   )
 }
